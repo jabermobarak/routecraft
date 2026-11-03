@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "files": {
+    "frozen.json": "69f45de13126b070d94c13b6f57baf4d4e4ae69c6a433b24e249477afddfa9dc",
+    "report.json": "00f18eede25412096233478cf664d04086522af8b92392a91690c331ff9e5dda",
+    "policies.json": "2ab4295ea9226c40b99f29cb91910f8ba11c967f161a4560c739aeed091bcdf0",
+    "head.json": "cdce153076d800943cdf66e5e79ac188127e6fef932d3fb1da5ee895140ba294",
+    "lexical.json": "59682101056f0c246a3e1f704afb6ee50aae5bf8b22aae31ac06823ede3d10b2",
+    "base/vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+    "base/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "base/config.json": "508e1f01aae55d73355cbdd82609be2f43ba5a0d3428837adbe56cf8391f8b39",
+    "base/model.safetensors": "7fb69ad9f6866d8983183c930e33828f326470bf6ad8bbb2ad4ed957a92e9414",
+    "adapter/adapter_config.json": "31de61ba1d8e0966fbb4c3692f0bb17a8e6bbf2be63470b763dc587d55724639",
+    "adapter/README.md": "356096a46b81e383a4a9ad77614b758bfdb15df382658ff9a3d4290d66d34389",
+    "adapter/adapter_model.safetensors": "9631f7eb8b0f455e40a7ba0496d3129c4fa6ba7d0ccfb6c565be79f81e8b309c"
+  },
+  "bundle_version": "766d4d0fecedc8a5"
+}

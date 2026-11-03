@@ -1,0 +1,654 @@
+{
+  "schema_version": 1,
+  "data_source": "CLINC150 selected ten-intent task + original OOS evaluation",
+  "dataset_sha256": "cc0407671486428033d76fb01f2cd8e7b78e0eeed70bab2439b044794170a91e",
+  "source_sha256": "36923c3705a59e08fe9c3883d8bc2dd966ef93e22cb78ac41171782a698d56e0",
+  "source_commit": "828f8093932c8fe6ca7936c3d2e52903b1c523de",
+  "seed": 42,
+  "labels": [
+    "book_flight",
+    "book_hotel",
+    "cancel_reservation",
+    "change_language",
+    "order_status",
+    "reset_settings",
+    "restaurant_reservation",
+    "schedule_meeting",
+    "sync_device",
+    "weather"
+  ],
+  "base_model": "google/bert_uncased_L-2_H-128_A-2",
+  "base_revision": "30b0a37ccaaa32f332884b96992754e246e48c5f",
+  "max_length": 48,
+  "split_sizes": {
+    "train": 1000,
+    "selection": 100,
+    "calibration": 50,
+    "policy": 50,
+    "policy_oos": 100,
+    "test": 300,
+    "test_oos": 1000
+  },
+  "removed_overlaps": {
+    "train": 0,
+    "selection": 0,
+    "calibration": 0,
+    "policy": 0,
+    "policy_oos": 0,
+    "test": 0,
+    "test_oos": 0
+  },
+  "trainable_parameters": 9482,
+  "total_parameters": 4395402,
+  "trainable_fraction": 0.0021572543307756607,
+  "frozen_parameters_unchanged": true,
+  "frozen_weights_sha256": "e5e2158461e2ba03e20182aef42e0c9d71288e45920ebd9d70183d70a35fb6d0",
+  "selected_epoch": 15,
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 2.03488490486145,
+      "selection_macro_f1": 0.45303556737380263,
+      "selection_accuracy": 0.5
+    },
+    {
+      "epoch": 2,
+      "loss": 0.9123098797798157,
+      "selection_macro_f1": 0.8508516483516484,
+      "selection_accuracy": 0.86
+    },
+    {
+      "epoch": 3,
+      "loss": 0.37203068161010744,
+      "selection_macro_f1": 0.8882996260705239,
+      "selection_accuracy": 0.89
+    },
+    {
+      "epoch": 4,
+      "loss": 0.23594838714599609,
+      "selection_macro_f1": 0.892630059998481,
+      "selection_accuracy": 0.9
+    },
+    {
+      "epoch": 5,
+      "loss": 0.15391473245620726,
+      "selection_macro_f1": 0.9196977291714135,
+      "selection_accuracy": 0.92
+    },
+    {
+      "epoch": 6,
+      "loss": 0.10045435380935669,
+      "selection_macro_f1": 0.9196977291714135,
+      "selection_accuracy": 0.92
+    },
+    {
+      "epoch": 7,
+      "loss": 0.0842455763220787,
+      "selection_macro_f1": 0.9215159109895952,
+      "selection_accuracy": 0.92
+    },
+    {
+      "epoch": 8,
+      "loss": 0.08075452516973018,
+      "selection_macro_f1": 0.9292898913951545,
+      "selection_accuracy": 0.93
+    },
+    {
+      "epoch": 9,
+      "loss": 0.08099883933365346,
+      "selection_macro_f1": 0.9292063492063491,
+      "selection_accuracy": 0.93
+    },
+    {
+      "epoch": 10,
+      "loss": 0.05665179395675659,
+      "selection_macro_f1": 0.9292898913951545,
+      "selection_accuracy": 0.93
+    },
+    {
+      "epoch": 11,
+      "loss": 0.04540758806467056,
+      "selection_macro_f1": 0.9192215386952229,
+      "selection_accuracy": 0.92
+    },
+    {
+      "epoch": 12,
+      "loss": 0.056674887254834175,
+      "selection_macro_f1": 0.9109060530113162,
+      "selection_accuracy": 0.91
+    },
+    {
+      "epoch": 13,
+      "loss": 0.04707941092224792,
+      "selection_macro_f1": 0.9318114125894447,
+      "selection_accuracy": 0.93
+    },
+    {
+      "epoch": 14,
+      "loss": 0.04877185036987066,
+      "selection_macro_f1": 0.9201488569909622,
+      "selection_accuracy": 0.92
+    },
+    {
+      "epoch": 15,
+      "loss": 0.03297204297035933,
+      "selection_macro_f1": 0.9392898913951544,
+      "selection_accuracy": 0.94
+    },
+    {
+      "epoch": 16,
+      "loss": 0.022511939965188504,
+      "selection_macro_f1": 0.9293400167084378,
+      "selection_accuracy": 0.93
+    },
+    {
+      "epoch": 17,
+      "loss": 0.022180042577907445,
+      "selection_macro_f1": 0.9172302860538155,
+      "selection_accuracy": 0.92
+    },
+    {
+      "epoch": 18,
+      "loss": 0.026103417100384833,
+      "selection_macro_f1": 0.9292466013518645,
+      "selection_accuracy": 0.93
+    },
+    {
+      "epoch": 19,
+      "loss": 0.03238380452198908,
+      "selection_macro_f1": 0.9081826670061964,
+      "selection_accuracy": 0.91
+    },
+    {
+      "epoch": 20,
+      "loss": 0.018769175127148627,
+      "selection_macro_f1": 0.929156223893066,
+      "selection_accuracy": 0.93
+    },
+    {
+      "epoch": 21,
+      "loss": 0.02927489637210965,
+      "selection_macro_f1": 0.9378652066887361,
+      "selection_accuracy": 0.94
+    }
+  ],
+  "policies": {
+    "lora": {
+      "temperature": 2.123909960438129,
+      "threshold": 0.91,
+      "policy_balanced_accuracy": 0.965,
+      "objective": "0.5 * in-scope acceptance + 0.5 * out-of-scope rejection"
+    },
+    "lexical": {
+      "temperature": 0.4357560059199737,
+      "threshold": 0.97,
+      "policy_balanced_accuracy": 0.94,
+      "objective": "0.5 * in-scope acceptance + 0.5 * out-of-scope rejection"
+    },
+    "frozen": {
+      "temperature": 0.9828462595135637,
+      "threshold": 0.76,
+      "policy_balanced_accuracy": 0.75,
+      "objective": "0.5 * in-scope acceptance + 0.5 * out-of-scope rejection"
+    }
+  },
+  "test": {
+    "lora": {
+      "accuracy": 0.9733333333333334,
+      "macro_f1": 0.9732980764800795,
+      "nll": 0.15346360373014115,
+      "confusion_matrix": [
+        [
+          27,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          30,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          29,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          30,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          30,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          30,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          28,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          30,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          28,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          30
+        ]
+      ],
+      "routing": {
+        "in_scope_coverage": 0.8466666666666667,
+        "accepted_in_scope_accuracy": 1.0,
+        "out_of_scope_false_accept_rate": 0.066,
+        "accepted_in_scope_rows": 254,
+        "in_scope_rows": 300,
+        "out_of_scope_rows": 1000,
+        "calibrated_in_scope_nll": 0.14342406462291327
+      }
+    },
+    "lexical": {
+      "accuracy": 0.9866666666666667,
+      "macro_f1": 0.9867185329258128,
+      "nll": 0.22709224442444517,
+      "confusion_matrix": [
+        [
+          30,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          29,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          30,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          30,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          30,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          29,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          29,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          29,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          30,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          30
+        ]
+      ],
+      "routing": {
+        "in_scope_coverage": 0.86,
+        "accepted_in_scope_accuracy": 1.0,
+        "out_of_scope_false_accept_rate": 0.145,
+        "accepted_in_scope_rows": 258,
+        "in_scope_rows": 300,
+        "out_of_scope_rows": 1000,
+        "calibrated_in_scope_nll": 0.05267236384228252
+      }
+    },
+    "frozen": {
+      "accuracy": 0.9166666666666666,
+      "macro_f1": 0.9151156593310217,
+      "nll": 0.3768567615699471,
+      "confusion_matrix": [
+        [
+          24,
+          0,
+          0,
+          1,
+          0,
+          0,
+          4,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          28,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          28,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          30,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          24,
+          0,
+          0,
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          29,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          1,
+          0,
+          23,
+          3,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          30,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          29,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          30
+        ]
+      ],
+      "routing": {
+        "in_scope_coverage": 0.6533333333333333,
+        "accepted_in_scope_accuracy": 0.9948979591836735,
+        "out_of_scope_false_accept_rate": 0.23,
+        "accepted_in_scope_rows": 196,
+        "in_scope_rows": 300,
+        "out_of_scope_rows": 1000,
+        "calibrated_in_scope_nll": 0.37219437081526285
+      }
+    }
+  },
+  "lora_test_errors": [
+    {
+      "text": "\"i'll be travelling from lax and headed to phl for 120 on the 10th of may",
+      "expected": "book_flight",
+      "predicted": "book_hotel"
+    },
+    {
+      "text": "\"i\"m headed out to lax and going to phl for a low price of $120 this weekend on the 12th",
+      "expected": "book_flight",
+      "predicted": "book_hotel"
+    },
+    {
+      "text": "\"i'll leave to lax and go to phl for $120 on nov 5th",
+      "expected": "book_flight",
+      "predicted": "book_hotel"
+    },
+    {
+      "text": "please delete the reservation for roberts at village tavern",
+      "expected": "cancel_reservation",
+      "predicted": "restaurant_reservation"
+    },
+    {
+      "text": "i'd like to make a reservation at rooth chris, can you do that",
+      "expected": "restaurant_reservation",
+      "predicted": "cancel_reservation"
+    },
+    {
+      "text": "are there any open reservations at outback tonight",
+      "expected": "restaurant_reservation",
+      "predicted": "cancel_reservation"
+    },
+    {
+      "text": "connect to my device",
+      "expected": "sync_device",
+      "predicted": "order_status"
+    },
+    {
+      "text": "unsync yourself from my device",
+      "expected": "sync_device",
+      "predicted": "order_status"
+    }
+  ],
+  "training_seconds": 50.16288006600007,
+  "environment": {
+    "python": "3.12.14",
+    "torch": "2.8.0+cpu",
+    "threads": 2
+  },
+  "model_version": "7740bb6af54c351f"
+}

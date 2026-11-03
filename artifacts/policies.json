@@ -1,0 +1,20 @@
+{
+  "lora": {
+    "temperature": 2.123909960438129,
+    "threshold": 0.91,
+    "policy_balanced_accuracy": 0.965,
+    "objective": "0.5 * in-scope acceptance + 0.5 * out-of-scope rejection"
+  },
+  "lexical": {
+    "temperature": 0.4357560059199737,
+    "threshold": 0.97,
+    "policy_balanced_accuracy": 0.94,
+    "objective": "0.5 * in-scope acceptance + 0.5 * out-of-scope rejection"
+  },
+  "frozen": {
+    "temperature": 0.9828462595135637,
+    "threshold": 0.76,
+    "policy_balanced_accuracy": 0.75,
+    "objective": "0.5 * in-scope acceptance + 0.5 * out-of-scope rejection"
+  }
+}
