@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "routecraft"
+version = "1.0.0"
+description = "LoRA-adapted intent routing with baselines, calibration and review decisions"
+requires-python = ">=3.11"
+dependencies = ["numpy>=2,<3", "scikit-learn>=1.6,<2", "torch==2.8.0", "transformers==4.46.3", "peft==0.14.0", "fastapi>=0.115,<1", "uvicorn>=0.30,<1"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "httpx>=0.27,<1", "ruff>=0.11,<1"]
+
+[project.scripts]
+routecraft = "routecraft.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["routecraft*"]
+
+[tool.setuptools.package-data]
+routecraft = ["static/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100

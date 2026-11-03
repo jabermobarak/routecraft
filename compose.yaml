@@ -1,0 +1,8 @@
+services:
+  router:
+    build: .
+    ports:
+      - "127.0.0.1:8030:8030"
+    environment:
+      RC_API_TOKEN: ${RC_API_TOKEN:-}
+    restart: unless-stopped
